@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
-import IonIcons from "react-native-vector-icons/Ionicons";
+import { Ionicons } from "react-native-vector-icons";
 
 const ChatBubble = ({ role, onSpeech, text }) => {
   return (
@@ -13,7 +13,7 @@ const ChatBubble = ({ role, onSpeech, text }) => {
       <Text style={styles.chatText}>{text}</Text>
       {role === "model" && (
         <TouchableOpacity onPress={onSpeech} style={styles.speakerIcon}>
-          <IonIcons name="volume-high-outline" size={24} color="black" />
+          <Ionicons name="volume-high-outline" size={24} color="#fff" />
         </TouchableOpacity>
       )}
     </View>
@@ -23,11 +23,11 @@ const ChatBubble = ({ role, onSpeech, text }) => {
 const styles = StyleSheet.create({
 
     chatItem: {
-        padding: 10,
-        marginBottom: 10,
-        borderRadius: 10,
-        maxWidth: "70%",
-        position: "relative",
+      marginBottom: 10,
+      padding: 10,
+      borderRadius: 10,
+      maxWidth: "70%",
+      position: "relative",
     },
 
     userChatItem: {

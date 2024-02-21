@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "chatbot",
-    "slug": "chatbot",
+    "slug": "gemini-chatbot",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f8040fe0-9646-480f-9118-2d122710cd7d"
+      }
+    },
+    "owner": "haneesh-bandaru"
   }
 }
