@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import ChatBubble from "./ChatBubble";
-import { isSpeakingAsync, speak } from "expo-speech";
+import { isSpeakingAsync, speak, stop } from "expo-speech";
 import {
   ActivityIndicator,
   FlatList,
@@ -58,7 +58,7 @@ const Chatbot = () => {
       }
     } catch (error) {
       console.error("Error calling Gemini Pro API :", error);
-      console.error("Error response:", error.response);
+      console.error("Error response:", error.response?.data);
       setError("An error occured. Please try again.");
     } finally {
       setLoading(false);
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
   },
   button: {
     padding: 10,
-    backgroundColor: "007AFF",
+    backgroundColor: "#007AFF",
     borderRadius: 25,
   },
   buttonText: {
