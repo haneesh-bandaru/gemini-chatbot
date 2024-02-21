@@ -8,9 +8,9 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  TouchableOpacity,
   View,
 } from "react-native";
+import { Pressable } from "react-native";
 
 const Chatbot = () => {
   const [chat, setChat] = useState([]);
@@ -102,9 +102,9 @@ const Chatbot = () => {
           onChangeText={setUserInput}
         />
 
-        <TouchableOpacity style={styles.button} onPress={handleUserInput}>
+        <Pressable style={styles.button} onPress={handleUserInput}>
           <Text style={styles.buttonText}>Send</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
       {loading && <ActivityIndicator style={styles.loading} color="#333" />}
       {error && <Text style={styles.error}>{error}</Text>}
